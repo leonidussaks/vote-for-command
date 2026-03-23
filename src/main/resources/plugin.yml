@@ -1,0 +1,26 @@
+name: VoteForCommand
+version: '1.0-SNAPSHOT'
+main: me.leonidussaks.voteForCommand.VoteForCommand
+api-version: '1.21'
+description: "With this plugin players can vote for command execute!"
+author: "leonidussaks"
+commands:
+  vote:
+    description: "Open vote menu."
+    usage: "/vote"
+    permission: "voteforcommand.vote.use"
+  reload:
+    description: "Reload plugin config."
+    usage: "/reload"
+    permission: "voteforcommand.reload.use"
+    aliases:
+      - votereload
+permissions:
+  voteforcommand.vote.use:
+    description: "Allow player to use /vote command (open menu)."
+    default: true
+  voteforcommand.vote.participant:
+    description: "Allow player to click [FOR] and [AGAINST] buttons in chat."
+    default: true
+  voteforcommand.reload.use:
+    description: "Allow admin to use /reload command for plugin."
