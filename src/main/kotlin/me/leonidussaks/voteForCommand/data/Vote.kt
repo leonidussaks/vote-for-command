@@ -15,6 +15,6 @@ data class Vote(
     var playersFor: MutableList<Player> = mutableListOf(),
     var playersAgainst: MutableList<Player> = mutableListOf(),
     var currentCooldown: Int = 0,
-    var endTime: Int = 0,
+    var endTime: Int = 35,
     //
     )

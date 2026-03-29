@@ -27,7 +27,7 @@ object VoteManager {
     fun startVote(vote: Vote, initiator: Player) {
 
         CURRENT_VOTE = vote
-        vote.endTime = 35
+        vote.endTime = ConfigManager.VOTE_TIME
 
 
         val forClickCallback = ClickEvent.callback(
