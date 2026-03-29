@@ -54,7 +54,7 @@ object VoteManager {
             { options: ClickCallback.Options.Builder? ->
                 options!!
                     .uses(ClickCallback.UNLIMITED_USES)
-                    .lifetime(Duration.ofSeconds(CURRENT_VOTE!!.endTime.toLong())) // I don't know why it's long
+                    .lifetime(Duration.ofSeconds(CURRENT_VOTE!!.endTime.toLong()))
             }
         )
 
@@ -88,10 +88,8 @@ object VoteManager {
         val buttonAgainst: Component = Component.text(ConfigManager.LOCALE_CONFIG.voteAgainst, NamedTextColor.RED)
             .clickEvent(againstClickCallback)
 
-
-        // TwT
         var desc = vote.description
-        if (desc.last() == '.' || desc.last() == '!') // just for pretty
+        if (desc.last() == '.' || desc.last() == '!')
             desc = desc.dropLast(1)
         val voteMessage = PLUGIN_NAME
             .append(Component.text(ConfigManager.LOCALE_CONFIG.newVoteStarted + "(${vote.endTime}s) remaining!\n", NamedTextColor.YELLOW))
