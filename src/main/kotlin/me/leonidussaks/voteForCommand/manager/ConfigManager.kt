@@ -18,6 +18,7 @@ object ConfigManager {
     fun load() {
         VoteManager.VOTING_COMMANDS.addAll(loadVotes()) // TwT ikr
         LOCALE_CONFIG = LocaleConfig.fromConfig(VoteForCommand.PLUGIN.config)
+        VOTE_TIME = VoteForCommand.PLUGIN.config.getInt("voting-time", 60)
     }
 
     fun reload() {
